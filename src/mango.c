@@ -6288,7 +6288,7 @@ void updatetitle(struct wl_listener *listener, void *data) {
 	title = client_get_title(c);
 	if (title && c->foreign_toplevel)
 		wlr_foreign_toplevel_handle_v1_set_title(c->foreign_toplevel, title);
-	applyrules(c)
+	applyrules(c);
 	if (c == focustop(c->mon))
 		printstatus();
 }
